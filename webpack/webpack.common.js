@@ -77,6 +77,20 @@ const commonConfig = {
       }
     ]
   },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vender: {
+          chunks: 'all',
+          name: 'vender',
+          test: (module) => {
+            return /[\\/]node_modules[\\/](lodash|moment|react|react-dom|react-router|react-router-dom|axios|antd)/.test(module.context);
+          },
+          priority: 10,
+        },
+      }
+    }
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     mainFiles: ['index.tsx', 'index.ts', 'index'],
