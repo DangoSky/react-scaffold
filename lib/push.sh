@@ -12,7 +12,6 @@ mkdir -p ./prod-template
 mkdir -p ./prod-template/img
 mkdir -p ./prod-template/src
 mkdir -p ./prod-template/webpack
-mkdir -p ./prod-template
 cp -rf ./img/* ./prod-template/img
 cp -rf ./src/* ./prod-template/src
 cp -rf ./webpack/* ./prod-template/webpack
