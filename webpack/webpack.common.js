@@ -72,6 +72,7 @@ const commonConfig = {
           options: {
             limit: 5120,
             name: 'static/imgs/[name].[hash:8].[ext]',
+            publicPath: '../../'
           }
         }]
       }
